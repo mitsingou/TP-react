@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"; 
 import { Link } from 'react-router';
-import { Routes, Route } from "react-router";
-import Details from "./details.jsx";
+import Navbar from "./NavBar.jsx";
+
 
 
 const MovieList = () => {
@@ -19,9 +19,8 @@ const MovieList = () => {
     if (!Movies) return <div>Loading...</div>; 
     return (
         <div>
-
-            <div>            
-                
+            <div><Navbar /></div>,            
+            <div> 
                 <input                   
                     type="text"
                     value={valeur}                    
@@ -46,9 +45,7 @@ const MovieList = () => {
                         <div><br/></div>
                         </Link>
                     </li>
-                ))}
-                
-                
+                ))} 
             </ul>     
         </div>
     );

@@ -1,9 +1,11 @@
 import MovieList from "./MovieList";
-import { useParams } from "react-router";
+import CastList from "./CastList.jsx";
+import { data, useParams } from "react-router";
 import { useEffect, useState } from "react";
+import Navbar from "./NavBar.jsx";
 
 
-const Details = () => {
+const MovieDetail = () => {
   const { id: movieId } = useParams();
   const [movie, setMovie] = useState(null);
   
@@ -15,6 +17,7 @@ const Details = () => {
       .then((data) => {
         console.log(data);
         setMovie(data);
+       
       })
       .catch((error) => {
         console.error('Error fetching movie details:', error);
@@ -22,6 +25,7 @@ const Details = () => {
   }, [movieId]);
   if (!movie) return <div>Loading...</div>;
   return (
+    Navbar(),
     <div >
       Détails
       <p>{movie.original_title}</p>
@@ -38,14 +42,14 @@ const Details = () => {
         <strong>Date de sortie:</strong> {movie.release_date}
       </p>
       <p>
-        <input type="button" value="Ajouter à la liste de souhaits" />
-        <br/>
-        <input type="button" value="Retier à la liste des films" />
-        
+        <input type="hidden" value={movieId} />
       </p>
-
+      <div>
+         {movieId && <CastList movieId={movieId} />}
+       </div>
     </div>
   );
-};
+ };
 
-export default Details;
+export default MovieDetail;
+
