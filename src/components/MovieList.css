@@ -1,0 +1,147 @@
+
+.movieList--searchItem {
+    margin-bottom: 20px;
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.movieList--searchItem input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.movieList--searchItem button {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.movieList--results {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    height: inherit;
+    text-align: center;
+}
+
+.movieList--results ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    
+}
+
+.movieList--results li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: max-content;
+    width: 30%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    } 
+    
+
+.movieList--results img {
+    max-width: 100px;
+    height: 50%;
+    object-fit: cover;  
+    margin-right: 10px;
+}
+
+
+
+
+
+.movieList {
+    display: grid;
+    grid-template-columns: 25% 70%;  /* Col1: 25%, Col2: 70% */
+    gap: 5%;                          /* Espace entre colonnes */
+    height: 500px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.resultsContent {
+   
+    max-width: 800px;
+}
+
+
+
+
+
+
+.MovieList--content {   
+    text-align: left;  
+    width: 90%;
+    color: black;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.MovieList--content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+
+}
+
+.MovieList--content p {
+    padding: 20px;
+    text-align: left;
+    color: black;
+    display: flex;
+}
+
+
+ .MovieList--content nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Rend horizontal */
+    justify-content: center;
+}
+ .MovieList--content li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+ .MovieList--content li a:hover {
+    background-color: #555;
+}
+
+.movieList--content input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 35%;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.response--searchMovie {
+    width: auto
+}
+
+
+.test {
+    width: 30%;
+}
+
+.resultsContent ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}

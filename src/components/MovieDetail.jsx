@@ -1,8 +1,8 @@
-import MovieList from "./MovieList";
 import CastList from "./CastList.jsx";
-import { data, useParams } from "react-router";
+import { useParams } from "react-router";
 import { useEffect, useState } from "react";
-import Navbar from "./NavBar.jsx";
+import { useContext } from 'react';
+import { WishlistProvider } from "../context/WishlistProvider.jsx";
 
 
 const MovieDetail = () => {
@@ -25,8 +25,7 @@ const MovieDetail = () => {
   }, [movieId]);
   if (!movie) return <div>Loading...</div>;
   return (
-    Navbar(),
-    <div >
+       <div >
       Détails
       <p>{movie.original_title}</p>
       <p>
@@ -47,6 +46,9 @@ const MovieDetail = () => {
       <div>
          {movieId && <CastList movieId={movieId} />}
        </div>
+       <br />
+       <p><button >Ajouter à la liste</button></p>
+       <p><button >Retier de la liste</button></p>
     </div>
   );
  };

@@ -24,8 +24,11 @@ const Wishlist = () => {
                                 <h2>{movie.title}</h2>
                             </Link>
                             <p>{movie.description}</p>
+                            <br />
+                            
                         </li>
                     ))}
+                    
                 </ul>
             )}
         </div>

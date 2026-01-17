@@ -1,19 +1,20 @@
 import { Link } from "react-router";    
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <Link to='/'>Accueil</Link>
-          </li>
-          <li className="nav-item">
-            <Link to='/MovieList'>Films populaires</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  return ( 
+     <div className="nav-container">  
+      <nav>
+          <ul className="nav-menu" id="navMenu">
+              <li><Link to='/'>Accueil</Link></li>
+              <li><Link to='/Wishlist'>Liste de souhaits</Link></li>
+          </ul>
+      </nav>
+      <br/>
+      <br/>
+    </div>   
   );
 }
 export default Navbar;
+
+
+

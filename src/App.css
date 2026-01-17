@@ -2,7 +2,9 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
+  width: 90%;
+  color: black;
 }
 
 .logo {
@@ -41,7 +43,7 @@
   color: #888;
 }
 
-ul{
+/*ul{
   list-style-type: none;
-  width: 30%;
-}
+  width: 90%;
+}*/
